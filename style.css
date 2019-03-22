@@ -1,12 +1,12 @@
 .slideshow-container{
-    min-width: 1000px;
+    min-width: 900px;
     position: relative;
     margin: auto;
 }
 
 .prev, .next{
     cursor: pointer;
-    position: relative;
+    position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
@@ -15,7 +15,7 @@
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s;
-
+    border-radius:  0 3px 3px 0;
 }
 
 .next{
@@ -27,21 +27,26 @@
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text{
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    top: 0;
+.numbertext{
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0 2px;
+    transition: background-color 0.6s ease;
 }
 
+.dots{
+    display: flex;
+    justify-content: center;
+}
 .dot{
+    position: center;
     cursor: pointer;
     height: 13px;
     width: 13px;
     margin: 0 2px;
     background-color: #bbbb;
     border-radius: 50%;
-    display: inline-block;
     transition: background-color 0.6s ease;
 }
 
@@ -57,11 +62,11 @@
 }
 
 @-webkit-keyframes fade {
-    from{opacity: .4}
-    to{opacity: 1}
+    from{opacity:0;}
+    to{opacity: 1;}
 }
 
 @keyframes fade {
-    from{opacity: .4}
-    to{opacity: 1}
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
